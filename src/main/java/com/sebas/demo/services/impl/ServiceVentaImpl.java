@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sebas.demo.config.VentaDTOConverter;
+import com.sebas.demo.dto.VentaClientesDTO;
 import com.sebas.demo.dto.VentaDTO;
 import com.sebas.demo.repositories.RepositoryVenta;
 import com.sebas.demo.repositories.entities.Venta;
@@ -40,4 +41,13 @@ public class ServiceVentaImpl implements ServiceVenta {
                     .map(venta -> convert.convertToDTO(venta))
                     .toList();
     }
+
+	@Override
+    @Transactional(readOnly = true)
+	public List<VentaClientesDTO> findAll() {
+		List<Venta> ventas = (List<Venta>) repositoryVenta.findAll();
+        return ventas.stream()
+                    .map(venta -> convert.convertVentaClientesDTO(venta))
+                    .toList();
+	}
 }

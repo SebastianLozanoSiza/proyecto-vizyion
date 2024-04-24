@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import com.sebas.demo.dto.VentaClientesDTO;
 import com.sebas.demo.dto.VentaDTO;
 import com.sebas.demo.services.ServiceVenta;
 
@@ -21,6 +22,12 @@ public class VentaController {
 
     @Autowired
     private ServiceVenta serviceVenta;
+
+    @GetMapping("/")
+    public ResponseEntity<List<VentaClientesDTO>> getAllVentas() {
+        List<VentaClientesDTO> ventas = serviceVenta.findAll();
+        return ResponseEntity.ok(ventas);
+    }
 
     @GetMapping("/mes/{year}/{month}")
     public ResponseEntity<List<VentaDTO>> getVentasByMes(@PathVariable int year, @PathVariable int month) {

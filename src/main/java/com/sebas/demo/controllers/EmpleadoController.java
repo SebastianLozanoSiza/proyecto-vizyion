@@ -22,7 +22,7 @@ public class EmpleadoController {
     private ServiceEmpleado serviceEmpleado;
 
     @GetMapping("/")
-    public ResponseEntity<List<EmpleadoDTO>> getAllClientes() {
+    public ResponseEntity<List<EmpleadoDTO>> getAllEmpleados() {
         List<EmpleadoDTO> empleados = serviceEmpleado.findAll();
         return ResponseEntity.ok(empleados);
     }
