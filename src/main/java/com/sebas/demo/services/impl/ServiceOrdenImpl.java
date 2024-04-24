@@ -33,5 +33,14 @@ public class ServiceOrdenImpl implements ServiceOrden {
                 .map(orden -> convert.convertToDTO(orden))
                 .toList();
     }
+
+
+    @Override
+    public List<OrdenDTO> findOrdenesEnProceso() {
+        List<Orden> ordenes = repositoryOrden.findByEstadoDescripcion("En Proceso");
+        return ordenes.stream()
+                .map(orden -> convert.convertToDTO(orden))
+                .toList();
+    }
     
 }

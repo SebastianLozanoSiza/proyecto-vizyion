@@ -7,4 +7,6 @@ import com.sebas.demo.dto.OrdenDTO;
 public interface ServiceOrden {
     
     List<OrdenDTO> findAll();
+
+    List<OrdenDTO> findOrdenesEnProceso();
 }

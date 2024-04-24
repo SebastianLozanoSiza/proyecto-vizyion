@@ -26,4 +26,10 @@ public class OrdenController {
         List<OrdenDTO> ordenes = serviceOrden.findAll();
         return ResponseEntity.ok(ordenes);
     }
+
+    @GetMapping("/en-proceso")
+    public ResponseEntity<List<OrdenDTO>> getOrdenesEnProceso() {
+        List<OrdenDTO> ordenes = serviceOrden.findOrdenesEnProceso();
+        return ResponseEntity.ok(ordenes);
+    }
 }
