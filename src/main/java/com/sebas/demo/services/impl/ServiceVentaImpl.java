@@ -8,10 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.sebas.demo.config.EmpleadoDTOConverter;
 import com.sebas.demo.config.VentaDTOConverter;
+import com.sebas.demo.dto.EmpleadoDTO;
 import com.sebas.demo.dto.VentaClientesDTO;
 import com.sebas.demo.dto.VentaDTO;
 import com.sebas.demo.repositories.RepositoryVenta;
+import com.sebas.demo.repositories.entities.Empleado;
 import com.sebas.demo.repositories.entities.Venta;
 import com.sebas.demo.services.ServiceVenta;
 
@@ -26,6 +29,9 @@ public class ServiceVentaImpl implements ServiceVenta {
 
     @Autowired
     private VentaDTOConverter convert;
+
+    @Autowired
+    private EmpleadoDTOConverter converter;
 
     @Override
     @Transactional(readOnly = true)
@@ -50,4 +56,13 @@ public class ServiceVentaImpl implements ServiceVenta {
                     .map(venta -> convert.convertVentaClientesDTO(venta))
                     .toList();
 	}
+
+    @Override
+    public List<VentaDTO> findVentasByEmpleado(EmpleadoDTO empleadoDTO) {
+        Empleado empleado = converter.convertToEntity(empleadoDTO);
+        List<Venta> ventas = repositoryVenta.findByEmpleado(empleado);
+        return ventas.stream()
+                    .map(venta -> convert.convertToDTO(venta))
+                    .toList();
+    }
 }
