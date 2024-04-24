@@ -250,3 +250,13 @@ VALUES
 (3, 3),
 (4, 4),
 (5, 5);
+
+INSERT INTO users (email, pwd) VALUES ('juan@gmail.com', 'juan123');
+INSERT INTO users (email, pwd) VALUES ('luis@gmail.com', 'luis123');
+INSERT INTO users (email, pwd) VALUES ('pedro@gmail.com', 'pedro123');
+INSERT INTO users (email, pwd) VALUES ('sebas@gmail.com', 'sebas123');
+
+INSERT INTO roles (role_name, id_user) VALUES ('ROLE_ADMIN', 1);      
+INSERT INTO roles (role_name, id_user) VALUES ('ROLE_ADMIN', 2); 
+INSERT INTO roles (role_name, id_user) VALUES ('ROLE_USER', 3); 
+INSERT INTO roles (role_name, id_user) VALUES ('ROLE_USER', 4); 
