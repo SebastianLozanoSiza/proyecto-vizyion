@@ -59,4 +59,7 @@ public class Prenda {
 
     @OneToMany(mappedBy = "prenda", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<DetalleOrden> detalleOrden;
+
+    @OneToMany(mappedBy = "prenda", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<InsumoPrendas> insumoPrendas;
 }

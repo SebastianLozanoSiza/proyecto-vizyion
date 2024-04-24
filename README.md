@@ -533,7 +533,198 @@
 **10. Mostrar la lista de prendas y su respectivo stock disponible**
 
 ```sql
-# Consulta realizada ....
+[
+  {
+    "id": 1,
+    "nombre": "Camiseta de algodón manga corta",
+    "valorUnit": 20000,
+    "valorUnitUsd": 5,
+    "estado": "Pendiente",
+    "tipoProteccion": "Protección contra el sol",
+    "genero": "Masculino",
+    "codigo": "PR001",
+    "listaStock": [
+      {
+        "nombre": "Tela de algodón",
+        "valorUnitario": 10000,
+        "stockMin": 100,
+        "stockMax": 1000,
+        "cantidad": 2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Camisa de manga larga",
+    "valorUnit": 30000,
+    "valorUnitUsd": 7.5,
+    "estado": "Pendiente",
+    "tipoProteccion": "Protección contra el sol",
+    "genero": "Masculino",
+    "codigo": "PR002",
+    "listaStock": [
+      {
+        "nombre": "Tela de poliéster",
+        "valorUnitario": 20000,
+        "stockMin": 50,
+        "stockMax": 500,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Pantalón de mezclilla",
+    "valorUnit": 40000,
+    "valorUnitUsd": 10,
+    "estado": "Pendiente",
+    "tipoProteccion": "Protección contra el sol",
+    "genero": "Masculino",
+    "codigo": "PR003",
+    "listaStock": [
+      {
+        "nombre": "Hilo",
+        "valorUnitario": 5000,
+        "stockMin": 20,
+        "stockMax": 200,
+        "cantidad": 3
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Vestido de algodón",
+    "valorUnit": 50000,
+    "valorUnitUsd": 12.5,
+    "estado": "Pendiente",
+    "tipoProteccion": "Protección contra el agua",
+    "genero": "Masculino",
+    "codigo": "PR004",
+    "listaStock": [
+      {
+        "nombre": "Botones",
+        "valorUnitario": 2000,
+        "stockMin": 10,
+        "stockMax": 100,
+        "cantidad": 2
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Zapatos casuales",
+    "valorUnit": 60000,
+    "valorUnitUsd": 15,
+    "estado": "Pendiente",
+    "tipoProteccion": "Protección contra el sol",
+    "genero": "Masculino",
+    "codigo": "PR005",
+    "listaStock": [
+      {
+        "nombre": "Cierres",
+        "valorUnitario": 3000,
+        "stockMin": 5,
+        "stockMax": 50,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Gafas de sol",
+    "valorUnit": 10000,
+    "valorUnitUsd": 2.5,
+    "estado": "Pendiente",
+    "tipoProteccion": "Protección contra el sol",
+    "genero": "Masculino",
+    "codigo": "PR006",
+    "listaStock": [
+      {
+        "nombre": "Tela de algodón",
+        "valorUnitario": 10000,
+        "stockMin": 100,
+        "stockMax": 1000,
+        "cantidad": 10
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Chaqueta de cuero",
+    "valorUnit": 150000,
+    "valorUnitUsd": 37.5,
+    "estado": "Pendiente",
+    "tipoProteccion": "Protección contra el sol",
+    "genero": "Masculino",
+    "codigo": "PR007",
+    "listaStock": [
+      {
+        "nombre": "Tela de poliéster",
+        "valorUnitario": 20000,
+        "stockMin": 50,
+        "stockMax": 500,
+        "cantidad": 5
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Traje de baño",
+    "valorUnit": 50000,
+    "valorUnitUsd": 12.5,
+    "estado": "Pendiente",
+    "tipoProteccion": "Protección contra el sol",
+    "genero": "Masculino",
+    "codigo": "PR008",
+    "listaStock": [
+      {
+        "nombre": "Hilo",
+        "valorUnitario": 5000,
+        "stockMin": 20,
+        "stockMax": 200,
+        "cantidad": 3
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Gorra",
+    "valorUnit": 10000,
+    "valorUnitUsd": 2.5,
+    "estado": "Pendiente",
+    "tipoProteccion": "Protección contra el sol",
+    "genero": "Masculino",
+    "codigo": "PR009",
+    "listaStock": [
+      {
+        "nombre": "Botones",
+        "valorUnitario": 2000,
+        "stockMin": 10,
+        "stockMax": 100,
+        "cantidad": 2
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Medias",
+    "valorUnit": 5000,
+    "valorUnitUsd": 1.25,
+    "estado": "Pendiente",
+    "tipoProteccion": "Protección contra el sol",
+    "genero": "Masculino",
+    "codigo": "PR010",
+    "listaStock": [
+      {
+        "nombre": "Cierres",
+        "valorUnitario": 3000,
+        "stockMin": 5,
+        "stockMax": 50,
+        "cantidad": 1
+      }
+    ]
+  }
+]
 ```
 
 **11. Encontrar el nombre de los clientes que realizaron compras en una fecha específica junto con la cantidad de artículos comprados**
