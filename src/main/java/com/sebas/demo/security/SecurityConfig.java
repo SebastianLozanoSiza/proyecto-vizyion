@@ -31,7 +31,7 @@ public class SecurityConfig {
         requestHandler.setCsrfRequestAttributeName("_csrf");
         http.sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.authorizeHttpRequests(auth -> auth
-                .requestMatchers("/empleados/**", "/ordenes/**", "/ventas/**", "/inventario/**").hasAnyRole("ADMIN", "USER")
+                .requestMatchers("/empleados/**", "/ordenes/**", "/ventas/**", "/inventario/**", "/empresas/").hasAnyRole("ADMIN", "USER")
                 .requestMatchers("/authenticate/**").permitAll()
                 .requestMatchers(SWAGGER_WHILELIST).permitAll()
                 .anyRequest().permitAll())
